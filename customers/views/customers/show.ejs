@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Detail</title>
+  </head>
+  <body>
+    <h1>Customer Detail</h1>
+    <h2><%= customers.first_name + " " + customers.last_name %></h2>
+    <div>Company: <%= customers.company_name %></div>
+    <div>Address: <%= customers.address %></div>
+    <div>City: <%= customers.city %></div>
+    <div>Postal Code: <%= customers.postal %></div>
+    <div>Phone 1: <%= customers.phone1 %></div>
+    <div>Phone 1: <%= customers.phone2 %></div>
+    <div>Email: <%= customers.email %></div>
+    <hdiv3>Website: <%= customers.web %></div>
+    <br>
+      <form action="/customers/edit/<%= customers.id %>" method="GET">
+        <button type="submit">Edit Customer</button>
+    </form>
+
+  </body>
+</html>
