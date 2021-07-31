@@ -18,3 +18,4 @@ router.post("/", customerCtrl.create);
 router.put("/update/:id", customerCtrl.update);
 
 module.exports = router;
+Windsor
