@@ -13,6 +13,9 @@
         <li>
           <a href="/customers/<%= customer.id %>"><%= customer.first_name + " " + customer.last_name %></a> - <%= customer.company_name %>
         </li>
+        <form action="/customers/<%= customer.id %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+        </form>
         <% }); %>
     </ul>
 

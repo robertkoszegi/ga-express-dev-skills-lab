@@ -11,7 +11,7 @@ router.get("/edit/:id", customerCtrl.edit);
 
 router.get("/:id", customerCtrl.show);
 
-// router.delete("/:id", customerCtrl.delete);
+router.delete("/:id", customerCtrl.delete);
 
 router.put("/update/:id", customerCtrl.update);
 

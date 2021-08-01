@@ -34,7 +34,9 @@ function create(customer) {
 }
 
 function deleteOne(id) {
-    
+    const idx = customers.findIndex(customer => customer.id == id);
+    customers.splice(idx, 1);
+    // console.log("delete")
 }
 
 
@@ -61,4 +63,5 @@ module.exports = {
     create,
     getZero,
     updateOne,
+    deleteOne,
 }

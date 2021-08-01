@@ -40,12 +40,16 @@ function edit(req, res) {
 };
 
 function update(req, res) {
-    // console.log(req.body)
     Customer.updateOne(req.params.id, req.body)
     res.redirect('/customers/' + req.params.id)
-
+    
 }
 
+function deleteCust(req, res) {
+    Customer.deleteOne(req.params.id);
+    res.redirect('/customers')
+    // console.log(Customer.getAll())
+}
 
 module.exports = {
     index, 
@@ -54,4 +58,5 @@ module.exports = {
     create,
     edit,
     update,
+    delete: deleteCust,
 };
