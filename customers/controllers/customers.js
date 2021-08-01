@@ -36,12 +36,12 @@ function edit(req, res) {
     res.render("customers/new", {
         customers: Customer.getOne(req.params.id)
     });
-    
+    console.log(Customer.getOne(req.params.id))
 };
 
 function update(req, res) {
     // console.log(req.body)
-    Customers.updateOne(req.params.id, req.body)
+    Customer.updateOne(req.params.id, req.body)
     res.redirect('/customers/' + req.params.id)
 
 }

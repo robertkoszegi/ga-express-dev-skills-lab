@@ -11,7 +11,10 @@
     <!-- Form action changes depending on customers.id -->
     <h1><%= customers.id === 0 ? "New Customer" : "Edit Customer Details"%></h1>
 
-    <form action="<% customers.id === 0 ? `/customers/` : `/customers/update/${customers.id}?_method=PUT` %>" method="POST" autocomplete="off"><br>
+    <% let path = ""; %>
+    <% if(customers.id == 0) {path = '/customers/'} else {path = '/customers/update/' + customers.id + '?_method=PUT'} %>
+
+    <form action="<%= path %>" method="POST" autocomplete="off"><br>
         <input placeholder="First Name" type="text" name="first_name"  value="<%= customers.first_name %>" ><br>
         <input placeholder="Last Name" type="text" name="last_name" value="<%= customers.last_name %>" ><br>
         <input placeholder="Company Name" type="text" name="company_name" value="<%= customers.company_name %>" ><br>
@@ -28,6 +31,5 @@
     </form>
     <br>
     
-
 </body>
 </html>

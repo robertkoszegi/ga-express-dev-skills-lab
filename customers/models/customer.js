@@ -38,7 +38,7 @@ function deleteOne(id) {
 }
 
 
-function updateOne() {
+function updateOne(id, customer) {
     const idx = customers.find(customer => customer.id == id);
     // replace item
     idx.first_name = customer.first_name;

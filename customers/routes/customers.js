@@ -7,15 +7,14 @@ router.get('/', customerCtrl.index);
 
 router.get("/new", customerCtrl.new);
 
-router.get("/:id", customerCtrl.show);
-
 router.get("/edit/:id", customerCtrl.edit);
+
+router.get("/:id", customerCtrl.show);
 
 // router.delete("/:id", customerCtrl.delete);
 
-router.post("/", customerCtrl.create);
-
 router.put("/update/:id", customerCtrl.update);
 
+router.post("/", customerCtrl.create);
+
 module.exports = router;
-Windsor
