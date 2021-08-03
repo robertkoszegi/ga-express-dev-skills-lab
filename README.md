@@ -5,6 +5,6 @@ Notes: </br>
 -I used the new.ejs file for both editing an etry and adding new entries into the customer list. </br>
     To achieve this the form action and submit button had to have conitional attributes.
 
-Icebox: </bt>
+Icebox: </br>
 -I would like to make the new/edit form a modal dialog </br>
 -CSS styling
