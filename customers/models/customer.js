@@ -16,7 +16,6 @@ function getZero() {
 // for creating a customer
 function create(customer) {
     const newCust = {}
-    // these values are different in todos
     newCust.id = Date.now() % 100000;
     newCust.first_name = customer.first_name;
     newCust.last_name = customer.last_name;
